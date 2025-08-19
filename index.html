@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>William Mbiena | Career Infographic</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <!-- Chosen Palette: Brilliant Blues -->
+    <!-- Application Structure Plan: The infographic tells a story in four parts. 1) Hero section with a powerful summary and key metrics (Years of Experience, Languages) for immediate impact. 2) A "Core Competencies" section using donut charts to quickly visualize the blend of tech and creative skills. 3) A "Career Journey" section presented as a clean, visual timeline to show progression and key roles. 4) A "Global Impact & Key Achievements" section using large numbers and a simple map concept to highlight major successes, like the AfDB contract. This structure is designed for scannability and visual storytelling, guiding the recruiter through a compelling narrative of skills and accomplishments. -->
+    <!-- Visualization & Content Choices: 
+        - Key Metrics (Experience, Languages) -> Goal: Inform -> Viz: Single Big Number -> Justification: High-impact, easily digestible stats. Method: HTML/Tailwind.
+        - Skill Distribution -> Goal: Compare -> Viz: Donut Charts -> Justification: Shows the composition of skills (Tech vs. Creative) in a simple, visual way. Library: Chart.js.
+        - Career Progression -> Goal: Change -> Viz: Timeline -> Justification: Clearly shows career growth over time in a standard, easy-to-follow format. Method: Structured HTML/CSS with Tailwind.
+        - Key Achievements (50% increase, AfDB contract) -> Goal: Inform -> Viz: Single Big Number with context -> Justification: Draws attention to major, quantifiable successes. Method: HTML/Tailwind.
+        - CONFIRMING NO SVG/Mermaid.
+    -->
+    <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 300px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 300px;
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+
+    <div class="container mx-auto p-4 sm:p-8 max-w-5xl bg-white shadow-2xl rounded-lg my-8">
+
+        <header class="text-center p-8 border-b-4 border-blue-600">
+            <h1 class="text-5xl font-black text-gray-900">WILLIAM MBIENA</h1>
+            <p class="text-2xl font-semibold text-blue-700 mt-2">Communications, Content &amp; Technology Strategist</p>
+        </header>
+
+        <section class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center py-10">
+            <div>
+                <p class="text-6xl font-extrabold text-blue-600">15+</p>
+                <p class="text-xl font-bold text-gray-700">Years of Experience</p>
+            </div>
+            <div>
+                <p class="text-6xl font-extrabold text-blue-600">4</p>
+                <p class="text-xl font-bold text-gray-700">Languages Spoken</p>
+            </div>
+            <div>
+                <p class="text-6xl font-extrabold text-blue-600">2</p>
+                <p class="text-xl font-bold text-gray-700">Continents of Work</p>
+            </div>
+        </section>
+
+        <section class="bg-gray-50 py-12 px-8 rounded-lg">
+            <h2 class="text-4xl font-bold text-center text-gray-900 mb-10">Core Competencies</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="text-center">
+                    <div class="chart-container">
+                        <canvas id="techSkillsChart"></canvas>
+                    </div>
+                    <h3 class="text-2xl font-bold mt-4 text-gray-800">Technology & Project Management</h3>
+                    <p class="text-gray-600 mt-2">Driving digital transformation and managing complex IT solutions for public sector clients.</p>
+                </div>
+                <div class="text-center">
+                    <div class="chart-container">
+                        <canvas id="commSkillsChart"></canvas>
+                    </div>
+                    <h3 class="text-2xl font-bold mt-4 text-gray-800">Communications & Marketing</h3>
+                    <p class="text-gray-600 mt-2">Orchestrating impactful marketing campaigns and developing key business partnerships.</p>
+                </div>
+                <div class="text-center">
+                    <div class="chart-container">
+                        <canvas id="contentSkillsChart"></canvas>
+                    </div>
+                    <h3 class="text-2xl font-bold mt-4 text-gray-800">Digital Content & Photography</h3>
+                    <p class="text-gray-600 mt-2">Creating and managing high-quality visual assets for institutional events and media distribution.</p>
+                </div>
+            </div>
+        </section>
+        
+        <section class="py-12 px-8">
+            <h2 class="text-4xl font-bold text-center text-gray-900 mb-12">Career Journey</h2>
+            <div class="relative">
+                <div class="border-l-4 border-blue-500 absolute h-full top-0 left-1/2 -ml-0.5"></div>
+                
+                <div class="mb-12 flex justify-between items-center w-full">
+                    <div class="order-1 w-5/12"></div>
+                    <div class="z-20 flex items-center order-1 bg-blue-500 shadow-xl w-12 h-12 rounded-full">
+                        <h1 class="mx-auto font-bold text-lg text-white">2024</h1>
+                    </div>
+                    <div class="order-1 bg-blue-100 rounded-lg shadow-xl w-5/12 px-6 py-4">
+                        <h3 class="font-bold text-blue-800 text-xl">Photographer, IFAD</h3>
+                        <p class="text-sm leading-snug tracking-wide text-gray-900 text-opacity-100">Official photographer for institutional events, managing all digital image assets and ensuring brand compliance.</p>
+                    </div>
+                </div>
+
+                <div class="mb-12 flex justify-between flex-row-reverse items-center w-full">
+                    <div class="order-1 w-5/12"></div>
+                    <div class="z-20 flex items-center order-1 bg-blue-500 shadow-xl w-12 h-12 rounded-full">
+                        <h1 class="mx-auto text-white font-bold text-lg">2022</h1>
+                    </div>
+                    <div class="order-1 bg-gray-100 rounded-lg shadow-xl w-5/12 px-6 py-4">
+                        <h3 class="font-bold text-gray-800 text-xl">Consultant, SYS GREEN</h3>
+                        <p class="text-sm leading-snug tracking-wide text-gray-900 text-opacity-100">Leading application project accounts and managing client relationships for successful project delivery.</p>
+                    </div>
+                </div>
+                
+                <div class="mb-12 flex justify-between items-center w-full">
+                    <div class="order-1 w-5/12"></div>
+                    <div class="z-20 flex items-center order-1 bg-blue-500 shadow-xl w-12 h-12 rounded-full">
+                        <h1 class="mx-auto font-bold text-lg text-white">2016</h1>
+                    </div>
+                    <div class="order-1 bg-blue-100 rounded-lg shadow-xl w-5/12 px-6 py-4">
+                        <h3 class="font-bold text-blue-800 text-xl">Territory Manager, Oracle</h3>
+                        <p class="text-sm leading-snug tracking-wide text-gray-900 text-opacity-100">Drove public sector digital transformation, leading to a 50% increase in acquisitions.</p>
+                    </div>
+                </div>
+
+                <div class="mb-12 flex justify-between flex-row-reverse items-center w-full">
+                    <div class="order-1 w-5/12"></div>
+                    <div class="z-20 flex items-center order-1 bg-blue-500 shadow-xl w-12 h-12 rounded-full">
+                        <h1 class="mx-auto text-white font-bold text-lg">2009</h1>
+                    </div>
+                    <div class="order-1 bg-gray-100 rounded-lg shadow-xl w-5/12 px-6 py-4">
+                        <h3 class="font-bold text-gray-800 text-xl">Territory Business Manager, Cisco</h3>
+                        <p class="text-sm leading-snug tracking-wide text-gray-900 text-opacity-100">Closed multi-million-dollar deals with key public sector clients, including the African Development Bank (AfDB).</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="bg-blue-600 text-white py-12 px-8 rounded-lg">
+             <h2 class="text-4xl font-bold text-center mb-10">Key Achievements & Global Impact</h2>
+             <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-center">
+                <div class="bg-blue-700 p-8 rounded-lg">
+                    <p class="text-6xl font-extrabold">50%</p>
+                    <p class="text-xl font-bold">Increase in Public Sector Acquisitions at Oracle</p>
+                </div>
+                <div class="bg-blue-700 p-8 rounded-lg">
+                    <p class="text-3xl font-bold">Multi-Million Dollar Contract</p>
+                    <p class="text-xl font-bold mt-2">with the African Development Bank (AfDB)</p>
+                </div>
+             </div>
+        </section>
+
+    </div>
+
+    <script>
+        const tooltipConfig = {
+            plugins: {
+                tooltip: {
+                    callbacks: {
+                        title: function(tooltipItems) {
+                            const item = tooltipItems[0];
+                            let label = item.chart.data.labels[item.dataIndex];
+                            if (Array.isArray(label)) {
+                              return label.join(' ');
+                            } else {
+                              return label;
+                            }
+                        }
+                    }
+                },
+                legend: {
+                    display: false
+                }
+            }
+        };
+
+        new Chart(document.getElementById('techSkillsChart'), {
+            type: 'doughnut',
+            data: {
+                labels: ['Project Management', 'Business Analytics', 'IT Systems'],
+                datasets: [{
+                    data: [40, 30, 30],
+                    backgroundColor: ['#2563EB', '#3B82F6', '#60A5FA'],
+                    borderColor: '#F3F4F6',
+                    borderWidth: 4
+                }]
+            },
+            options: tooltipConfig
+        });
+
+        new Chart(document.getElementById('commSkillsChart'), {
+            type: 'doughnut',
+            data: {
+                labels: ['Business Development', 'Partner Enablement', 'Marketing Campaigns'],
+                datasets: [{
+                    data: [45, 35, 20],
+                    backgroundColor: ['#2563EB', '#3B82F6', '#60A5FA'],
+                    borderColor: '#F3F4F6',
+                    borderWidth: 4
+                }]
+            },
+            options: tooltipConfig
+        });
+
+        new Chart(document.getElementById('contentSkillsChart'), {
+            type: 'doughnut',
+            data: {
+                labels: ['Photography', 'Digital Asset Management', 'Brand Compliance'],
+                datasets: [{
+                    data: [50, 30, 20],
+                    backgroundColor: ['#2563EB', '#3B82F6', '#60A5FA'],
+                    borderColor: '#F3F4F6',
+                    borderWidth: 4
+                }]
+            },
+            options: tooltipConfig
+        });
+    </script>
+</body>
+</html>
